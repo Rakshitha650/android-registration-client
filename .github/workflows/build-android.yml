@@ -12,11 +12,6 @@ on:
         default: 'https://api-internal.sandbox.xyz.net/'
         type: string
 
-  push:
-    branches:
-      - release*
-      - develop
-
 jobs:
   build:
     runs-on: ubuntu-latest
