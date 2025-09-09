@@ -1,5 +1,8 @@
 name: Build Android Registration-Client
 
+env:
+  SERVER_BASE_URL: ${{ github.event.inputs.ServerBaseURL }}
+
 on:
   workflow_dispatch:
     inputs:
