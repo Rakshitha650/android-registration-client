@@ -2,6 +2,13 @@ name: Build Android Registration-Client
 
 on:
   workflow_dispatch:
+    inputs:
+      defaultServerBaseURL:
+        description: 'Server Base URL'
+        required: false
+        default: 'https://api-internal.sandbox.xyz.net/'
+        type: string
+
   push:
     branches:
       - release*

@@ -1,6 +1,5 @@
 name: Android Registration-Client Build
 
-
 on:
   push:
     branches:
