@@ -1,15 +1,17 @@
 name: Android Registration-Client Build
 
+env:
+  defaultServerBaseURL: https://api-internal.sandbox.xyz.net/
+
 on:
-  push:
-    branches:
-      - '!release-branch'
-      - release-*
-      - master
-      - 1.*
-      - develop
-      - sprint-*
-      - main
+
+  workflow_dispatch:
+    inputs:
+      defaultServerBaseURL:
+        description: 'Server Base URL'
+        required: true
+        default: 'https://api-internal.sandbox.xyz.net/'
+        type: string
 
 jobs:
   build-android:
